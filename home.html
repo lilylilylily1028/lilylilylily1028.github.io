@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>home</title>
+    <style>
+      body {
+        box-sizing: border-box;
+        font-family: Consolas, monospace;
+      }
+      img {
+        max-width: 100%;
+      }
+      .jb-a {
+        margin: 0px auto;
+        position: relative
+      }
+      .jb-b{
+        margin: 275px 281px 275px 281px;
+      }
+      .jb-c {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        transition: opacity 0.5s linear;
+        /*display: none;*/
+        background-image: url(img3.png);
+        background-repeat: no-repeat;
+      }
+      .jb-a:hover .jb-c {
+        opacity: 1;
+        /*display: block;*/
+      }
+      #menu{
+        border: solid 1px blue;
+        width: 100px;
+        height: 20px;
+        padding-left: 50px;
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+    <div class="jb-a">
+      <img src="img11.png" alt="" class="jb-b">
+      <a href="story.html"><img src="img2.png" alt="" class="jb-c"></a>
+    </div>
+  </body>
+</html>
