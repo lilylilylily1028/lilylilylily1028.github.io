@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div id="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="">
+        </a>
+      </div>
+
+      <div class="menu">
+        <a href="1기본 특성.html">character</a>
+        <a href="2종류 소개.html">kind</a>
+        <a href="4반려 오리.html">pet duck</a>
+        <a href="3스토리.html">cafe</a>
+        <a href="5갤러리.html">gallery</a>
+      </div>
+  </div>
+
+
+
+
+
+  
+  <div id="content">
+    <div class="text">
+      <p>Ducks are cute.<br>
+        A world&nbsp;&nbsp;&nbsp;&nbsp;
+        without ducks<br>
+        means nothing. <br>
+        I love them.</p>
+    </div>
+    <div class="duck-foot">
+      <img src="img/duck foot.png" alt="">
+    </div>
+    <div class="duck">
+      <img src="img/duck.png" alt="">
+    </div>
+    <div class="line1">
+      <img src="img/line1.png" alt="">
+    </div>
+    <div class="line2">
+      <img src="img/line2.png" alt="">
+    </div>
+
+
+  <div class="greenline greenline1"></div>
+  <div class="greenline greenline2"></div>
+  </div>
+
+
+
+  <a href="#header"><div class="fixed"></div></a>
+
+
+
+  <div id="footer">
+    <div class="footer1">
+      <a href="1기본 특성.html">character</a><br>
+      <a href="2종류 소개.html">kind</a><br>
+      <a href="4반려 오리.html">pet duck</a><br>
+      <a href="3스토리.html">cafe</a><br>
+      <a href="5갤러리.html">gallery</a><br>
+    </div>
+
+    <div class="footer2">
+
+      <a href="index.html">
+        <img src="img/logo.png" alt="">
+      </a>
+
+
+      <form action="" method="get">
+        <input type="email" placeholder="Email" id="email"><br>
+        <input type="password" placeholder="Password" maxlength="10" id="password">
+        <button type="submit" id="password-button">Log In</button>
+      </form>
+    </div>
+
+    <div class="footer3">
+      <a href="mailto:lily102877@kaywon.ac.kr">Send us a Message</a>
+
+      <p><br>16038 경기도 의왕시 계원대학로 66(내손동) <br>
+        66 Kaywondaehangno(Naeson-dong),<br>
+        Uiwang-si, Gyeonggi-do, Korea
+      </p>
+
+      <p class="info"><br>
+        copyright(c)lily102877
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+  <script>
+    const duckImages = document.querySelectorAll('.duck img, .duck-foot img, .line1 img, .line2 img');
+
+duckImages.forEach(img => {
+  img.addEventListener('mouseleave', function() {
+    this.style.animationPlayState = 'running';
+  });
+});
+  </script>
+
+</body>
+</html>
