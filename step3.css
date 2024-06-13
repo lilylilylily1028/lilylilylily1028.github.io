@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(img/green_bg.png);
+  overflow: hidden;
+  font-family: "Pixelify Sans", sans-serif;
+}
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1260px;
+}
+.text p {
+margin: 0;
+font-size: 50px;
+display: inline-block;
+margin-left: 490px;
+}
+.text img {
+float: right;
+margin-left: 5px;
+margin-top: 15px;
+}
+#item-count {
+  margin-left: 12px;
+  margin-top: 20px;
+  font-size: 30px;
+  float: left;
+}
+#item-count::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-image: url('img/item1.png'); 
+    background-size: contain;
+    background-position: center;
+    margin-left: 12px;
+}
+
+.frame {
+
+  --block-size: 42px;
+  height: calc(30 * var(--block-size));
+  width: calc(16* var(--block-size));
+  grid-template-rows: var(--block-size) calc(16 * var(--block-size)) var(--block-size);
+}
+
+.board {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: calc(16 * var(--block-size));
+  width: calc(30 * var(--block-size));
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(30, var(--block-size));
+  grid-template-rows: repeat(16, var(--block-size))
+}
+
+.block {
+  width: var(--block-size);
+  height: var(--block-size);
+  border-radius: 8px;
+}
+
+
+.wall {
+  background-image: url(img/green.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.exit {
+  background-color: red;
+  background-size: 50px 35px;
+  background-position: center center;
+  background-color: #cbdbfc;
+  opacity: 0.3;
+}
+
+.exit.show {
+  opacity: 1;
+}
+
+
+.player {
+  background: url('img/duck1.png');
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40px 40px;
+  z-index: 2; 
+
+}
+
+
+.item {
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 30PX;
+  height: 30PX; 
+ /* 아이템 이미지 경로 */
+  background-size: contain;
+  position: absolute;
+  z-index: 1;
+}
+
+
+.item.eaten {
+  opacity: 0;
+}
+#message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-image: url(img/88.png);
+}
+
+
+
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+#no {
+  position: absolute;
+  right: 450px;
+  bottom: 105px;
+  font-family: 'DungGeunMo';
+  font-size: 12px;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  animation: blackout 1.5s ease forwards;
+  z-index: 9999;
+  pointer-events: none;
+
+}
+@keyframes blackout {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}

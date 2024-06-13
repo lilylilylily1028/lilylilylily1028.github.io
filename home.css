@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(img/home.png);
+  overflow: hidden;
+  font-family: "Pixelify Sans", sans-serif;
+  text-align: center;
+}
+.container {
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+h1 {
+  font-size: 60px;
+  margin: 0;
+  color: white;
+}
+h3 {
+  font-size: 25px;
+  margin: 0;
+  color: white;
+}
+
+.btn-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btn img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.btn span {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 28px;
+  animation: blink 1.5s infinite;
+}
+
+
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+
+.duck_container {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  margin-top: 655px;
+}
+
+.duck  {
+  position: absolute;
+  height: 100%;
+  animation: moveRight 20s linear infinite;
+}
+
+@keyframes moveRight {
+  from {
+      left: -2%;
+  }
+  to {
+      left: 105%;
+  }
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  animation: blackout 1.5s ease forwards;
+  z-index: 9999;
+  pointer-events: none;
+
+}
+@keyframes blackout {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
