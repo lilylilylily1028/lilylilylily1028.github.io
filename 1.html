@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+  <title>Document</title>
+  <style>
+  @font-face {
+	  font-family: 'SUIT';
+	  font-weight: 100;
+	  src: local('SUIT Thin'), url('./font/suit/SUIT-Thin.woff2') format('woff2');
+  }
+  @font-face {
+	  font-family: 'SUIT';
+	  font-weight: 200;
+	  src: local('SUIT ExtraLight'), url('./font/suit/SUIT-ExtraLight.woff2') format('woff2');
+  }
+  @font-face {
+	  font-family: 'SUIT';
+	  font-weight: 300;
+	  src: local('SUIT Light'), url('./SUIT-Light.woff2') format('woff2');
+  }
+  @font-face {
+	  font-family: 'SUIT';
+	  font-weight: 400;
+	  src: local('SUIT Regular'), url('./font/suit/SUIT-Regular.woff2') format('woff2');
+  }
+  @font-face {
+	  font-family: 'SUIT';
+	  font-weight: 500;
+	  src: local('SUIT Medium'), url('./font/suit/SUIT-Medium.woff2') format('woff2');
+  }
+  @font-face {
+	  font-family: 'SUIT';
+	  font-weight: 600;
+	  src: local('SUIT SemiBold'), url('./font/suit/SUIT-SemiBold.woff2') format('woff2');
+  }
+  @font-face {
+	  font-family: 'SUIT';
+	  font-weight: 700;
+	  src: local('SUIT Bold'), url('./font/suit/SUIT-Bold.woff2') format('woff2');
+  }
+  @font-face {
+	  font-family: 'SUIT';
+	  font-weight: 800;
+	  src: local('SUIT ExtraBold'), url('./font/suit/SUIT-ExtraBold.woff2') format('woff2');
+  }
+  @font-face {
+	  font-family: 'SUIT';
+	  font-weight: 900;
+	  src: local('SUIT Heavy'), url('./font/suit/SUIT-Heavy.woff2') format('woff2');
+  }
+
+
+    body {
+      height: 100%;
+      font-family: 'SUIT', sans-serif;
+      background-color: black;
+      color: white;
+      overflow-y: hidden; /*Y축 스크롤 되지 않도록 설정*/
+    }
+
+
+    #footer {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+
+    #member {
+      position: absolute;
+      top: 180px;
+      left: 180px;
+    }
+    .member h5 {
+      margin: 0;
+      margin-top: 110px;
+      margin-bottom: 28px;
+      font-size: 30px;
+      font-weight: 900;
+    }
+    .member:first-of-type h5 {
+      margin-top: 0;
+    }
+    .member p {
+      margin: 0;
+      margin-bottom: 5px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .member span {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+    .member a {
+      color: white;
+      text-decoration: none;
+    }
+    .member-sub {
+      display: inline-block; /* 가로 배치 */
+    }
+    .member-sub:not(:last-child) {
+    border-right: 1px solid #ffffff;
+    padding-right: 50px;
+    margin-right: 50px;
+    }
+
+
+    #info-1 {
+      position: absolute;
+      bottom: 35px;
+      left: 80px;
+      display: flex;
+      justify-content: space-between;
+      width: 500px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+
+    #info-2 {
+      position: absolute;
+      bottom: 140px;
+      right: 80px;
+    }
+    #info-2 .info-2-1{
+      font-size: 15px;
+      font-weight: 800;
+    }
+    #info-2 .info-2-2{
+      margin-top: 5px;
+      font-size: 14px;
+      text-align: right;
+    }
+
+
+    #info-3 {
+      position: absolute;
+      bottom: 30px;
+      right: 80px;
+    }
+
+    #menu {
+      position: absolute;
+      top: 100px;
+      right: 80px;
+      font-weight: 600;
+    }
+    #menu ul {
+      margin: 0;
+      padding: 0;
+      width: 550px;
+      list-style-type: none;
+      text-align: right;
+      font-size: 26px;
+      font-weight: bolder;
+    }
+    #menu li {
+      border-top: 1.2px solid white; /* 상단 */
+      padding: 8px;
+    }
+    #menu li:hover {
+      transform: translateX(-5px);
+    }
+    #menu li:last-child {
+      border-bottom: 1.2px solid white; /* 마지막 하단 */
+    }
+    #menu li a {
+      color: white;
+      text-decoration: none;
+    }
+
+
+  </style>
+</head>
+<body>
+  <section id="footer">
+
+
+
+    <div id="member">
+
+
+      <div class="member">
+        <h5>PLANNER</h5>
+
+        <p>문서현</p>
+        <span><a href="">Protfolio  ></a></span>
+      </div>
+
+
+      <div class="member">
+        <h5>DESIGNER</h5>
+
+          <div class="member-sub">
+            <p>박해진</p>
+            <span><a href="">Protfolio  ></a></span>
+          </div>
+  
+          <div class="member-sub">
+            <p>이수진</p>
+            <span><a href="">Protfolio  ></a></span>
+          </div>
+  
+          <div class="member-sub">
+          <p>권나현</p>
+          <span><a href="">Protfolio  ></a></span>
+          </div>
+      </div>
+
+
+      <div class="member">
+        <h5>DEVELOPER</h5>
+
+          <div class="member-sub">
+            <p>김민찬</p>
+            <span><a href="">Protfolio  ></a></span>
+          </div>
+  
+          <div class="member-sub">
+            <p>임예현</p>
+            <span><a href="">Protfolio  ></a></span>
+          </div>
+      </div>
+
+
+    </div>
+
+
+
+    <div id="info-1">
+      <span>개인정보처리방침</span>
+      <span>이용약관</span>
+      <span>고객문의</span>
+      <span>인재채용</span>
+    </div>
+
+
+
+    <div id="info-2">
+      <img src="" alt="">
+      <div class="info-2-1">Lorem ipsum dolor sit amet consectetur</div>
+      <div class="info-2-2"> Est varius nec hac enim fermentum tristique. <br>
+        Libero adipiscing ante porttitor ornare</div>
+    </div>
+
+
+
+    <div id="info-3">
+      <p><b>&copy; All’light.</b> all rights reserved.</p>
+    </div>
+
+
+
+    <div id="menu">
+      <ul>
+        <li><a href="">MENU 1</a></li>
+        <li><a href="">MENU 2</a></li>
+        <li><a href="">MENU 3</a></li>
+        <li><a href="">MENU 4</a></li>
+        <li><a href="">MENU 5</a></li>
+      </ul>
+    </div>
+
+
+
+  </section>
+</body>
+</html>
