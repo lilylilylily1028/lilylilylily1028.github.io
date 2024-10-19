@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="font.css">
+  <title>ALL 'LIGHT</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      font-size: 62.5%; /* 1rem = 10px */
+    }
+    body {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      background-color: black;
+      color: white;
+      font-family: 'SUIT', sans-serif;
+    }
+    ::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+    #container {
+      display: flex;
+      white-space: nowrap; /* 내부 요소들을 가로로 나열 */
+      width: max-content;
+    }
+    .section {
+      width: 100vw;
+      height: 100vh;
+      border: 1px solid white;
+    }
+    h3 {
+      position: absolute;
+    }
+
+
+
+
+    #menu {
+      position: relative;
+      position: fixed;
+      width: 100vw;
+      height: 10vh;
+      background-color: rgba(255, 255, 255, 0.067);
+      text-align: center;
+      z-index: 999;
+      border: none;
+    }
+    #menu .menu ul {
+      display: grid;
+      grid-auto-flow: column; /* 가로 배치 */
+      align-items: center;
+      list-style: none;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    #menu .menu h2{
+      text-decoration: none;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+    #menu .menu li a{
+      text-decoration: none;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 200;
+    }
+
+
+
+    #introduce {
+      position: relative;
+      background-image: url(./img/BG.png);
+      background-position: center; 
+    }
+    #introduce .box {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      width: 1000px;
+      height: 300px;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    #introduce h2 {
+      font-size: 7rem;
+      margin-bottom: 10px;
+    }
+    #introduce p {
+      font-size: 1.8rem;
+      font-weight: 100;
+      margin-bottom: 25px;
+    }
+    #introduce b {
+      font-weight: 500;
+    }
+
+
+
+    #uxui-1 h4, #uxui-2 h4, #uxui-3 h4, #uxui-4 h4, #uxui-5 h4, #uxui-6 h4, #uxui-7 h4, #uxui-8 h4 {
+      font-size: 8rem;
+      text-align: left;
+      font-weight: 500;
+    }
+    #uxui-1 p, #uxui-2 p, #uxui-3 p, #uxui-4 p, #uxui-5 p, #uxui-6 p, #uxui-7 p, #uxui-8 p {
+      font-size: 1.8rem;
+      font-weight: 200;
+      text-align: left;
+      margin-bottom: 130px;
+      line-height: 1.5;
+    }
+    #uxui-1 ul, #uxui-2 ul, #uxui-3 ul, #uxui-4 ul, #uxui-5 ul, #uxui-6 ul, #uxui-7 ul, #uxui-8 ul {
+      font-size: 1.8rem;
+      font-weight: 200;
+    }
+    #uxui-1 li, #uxui-2 li, #uxui-3 li, #uxui-4 li, #uxui-5 li, #uxui-6 li, #uxui-7 li, #uxui-8 li {
+      margin-left: 20px;
+    }
+    #uxui-1 h5, #uxui-2 h5, #uxui-3 h5, #uxui-4 h5, #uxui-5 h5, #uxui-6 h5, #uxui-7 h5, #uxui-8 h5 {
+      font-size: 1.8rem;
+      font-weight: 200;
+      margin-bottom: 20px;
+    }
+    #uxui-1 .img-1 {
+      width: 70%;
+      height: 100%;
+      background-color: #333;
+      float: left;
+      background-image: url(./img/01_bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    #uxui-1 .text-1 {
+      width: 30%;
+      height: 100%;
+      background-color: black;
+      float: right;
+      
+      display: flex;
+      position: relative;
+      justify-content: center;
+    }
+    #uxui-1 .content {
+      width: 250px;
+      text-align: left;
+      position: absolute;
+      top: 200px;
+    }
+    #uxui-1 .nub {
+      position: absolute;
+      bottom: -60px;
+      right: 0;
+      font-size: 10rem;
+      font-weight: 300;
+    }
+
+
+
+
+    
+    #uxui-2 .text-2 {
+      width: 30%;
+      height: 100%;
+      background-color: black;
+      float: left;
+
+      display: flex;
+      position: relative;
+      justify-content: center; 
+    }
+    #uxui-2 .img-2 {
+      width: 70%;
+      height: 100%;
+      background-color: #333;
+      float: right;
+      background-image: url(./img/02_bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    #uxui-2 .content {
+      width: 280px;
+      text-align: left;
+      position: absolute;
+      top: 200px;
+    }
+    #uxui-2 .nub {
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      font-size: 10rem;
+      font-weight: 300;
+    }
+
+
+
+    #uxui-3 .text-3 {
+      width: 30%;
+      height: 100%;
+      background-color: black;
+      float: left;
+
+      display: flex;
+      position: relative; 
+      justify-content: center;
+    }
+    #uxui-3 .img-3 {
+      width: 70%;
+      height: 100%;
+      background-color: #333;
+      float: right;
+      background-image: url(./img/03_bg.png);
+      background-repeat: no-repeat;
+      background-size: cover; 
+      background-position: center;
+    }
+    #uxui-3 .content {
+      width: 300px;
+      text-align: left;
+      position: absolute;
+      top: 200px;
+    }
+    #uxui-3 .nub {
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      font-size: 10rem;
+      font-weight: 300;
+    }
+
+
+
+
+    #uxui-4 .img-4 {
+      width: 70%;
+      height: 100%;
+      background-color: #333;
+      float: left;
+      background-image: url(./img/04_bg.png);
+      background-repeat: no-repeat;
+      background-size: cover; 
+      background-position: center; 
+    }
+    #uxui-4 .text-4 {
+      width: 30%;
+      height: 100%;
+      background-color: black;
+      float: right;
+
+      display: flex;
+      position: relative; 
+      justify-content: center;
+    }
+    #uxui-4 .content {
+      width: 300px;
+      text-align: left;
+      position: absolute;
+      top: 200px;
+    }
+    #uxui-4 .nub {
+      position: absolute;
+      bottom: -60px;
+      right: 0;
+      font-size: 10rem;
+      font-weight: 300;
+    }
+
+
+
+    #uxui-5 .text-5 {
+      width: 30%;
+      height: 100%;
+      background-color: black;
+      float: left;
+
+      display: flex;
+      position: relative;
+      justify-content: center; 
+    }
+    #uxui-5 .img-5 {
+      width: 70%;
+      height: 100%;
+      background-color: #333;
+      float: right;
+      background-image: url(./img/05_bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; 
+    }
+    #uxui-5 .content {
+      width: 300px;
+      text-align: left;
+      position: absolute; 
+      top: 200px;
+    }
+    #uxui-5 .nub {
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      font-size: 10rem;
+      font-weight: 300;
+    }
+
+
+
+    #uxui-6 .text-6 {
+      width: 30%;
+      height: 100%;
+      background-color: black;
+      float: left;
+
+      display: flex;
+      position: relative;
+      justify-content: center; 
+    }
+    #uxui-6 .img-6 {
+      width: 70%;
+      height: 100%;
+      background-color: #333;
+      float: right;
+      background-image: url(./img/06_bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; 
+    }
+    #uxui-6 .content {
+      width: 300px; 
+      text-align: left;  
+      position: absolute; 
+      top: 200px;
+    }
+    #uxui-6 .nub {
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      font-size: 10rem;
+      font-weight: 300;
+    }
+
+
+
+    #uxui-7 .img-7 {
+      width: 70%;
+      height: 100%;
+      background-color: #333;
+      float: left;
+      background-image: url(./img/07_bg.png);
+      background-repeat: no-repeat;
+      background-size: cover; 
+      background-position: center;
+    }
+    #uxui-7 .text-7 {
+      width: 30%;
+      height: 100%;
+      background-color: black;
+      float: right;
+
+      display: flex;
+      position: relative; 
+      justify-content: center;  
+    }
+    #uxui-7 .content {
+      width: 300px; 
+      text-align: left; 
+      position: absolute; 
+      top: 200px;
+    }
+    #uxui-7 .nub {
+      position: absolute;
+      bottom: -60px;
+      right: 0;
+      font-size: 10rem;
+      font-weight: 300;
+    }
+
+
+
+    #uxui-8 .text-8 {
+      width: 30%;
+      height: 100%;
+      background-color: black;
+      float: left;
+
+      display: flex;
+      position: relative; 
+      justify-content: center;  
+    }
+    #uxui-8 .img-8 {
+      width: 70%;
+      height: 100%;
+      background-color: #333;
+      float: right;
+      background-image: url(./img/08_bg.png);
+      background-repeat: no-repeat;
+      background-size: cover; 
+      background-position: center; 
+    }
+    #uxui-8 .content {
+      width: 300px;
+      text-align: left;
+      position: absolute;
+      top: 200px;
+    }
+    #uxui-8 .nub {
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      font-size: 10rem;
+      font-weight: 300;
+    }
+
+
+    #footer {
+      position: relative;
+      background-size: cover;
+    }
+    #member {
+      position: absolute;
+      top: 120px;
+      left: 100px;
+    }
+    .member h5 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-top: 80px;
+      margin-bottom: 30px;
+    }
+    .member:first-of-type h5 {
+      margin-top: 0;
+    }
+    .member p {
+      margin-top: 20px;
+      margin-bottom: 5px;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .member span {
+      margin-top: 5px;
+      font-size: 1.6rem;
+    }
+    .member a {
+      color: white;
+      text-decoration: none;
+    }
+    .member-sub {
+      display: inline-block; /* 가로 배치 */
+    }
+    .member-sub:not(:last-child) {
+      border-right: 1px solid #ffffff;
+      padding-right: 50px;
+      margin-right: 50px;
+    }
+
+    #info-1 {
+      position: absolute;
+      bottom: 50px;
+      left: 100px;
+      display: flex;
+      justify-content: space-between;
+      width: 500px;
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: rgba(225, 225, 225, 0.9);
+    }
+
+    #info-2 {
+      position: absolute;
+      bottom: 140px;
+      right: 100px;
+    }
+    #info-2 .info-2-1{
+      font-size: 1.6rem;
+      font-weight: 800;
+    }
+    #info-2 .info-2-2{
+      margin-top: 5px;
+      font-size: 1.5rem;
+      text-align: right;
+    }
+
+
+    #info-3 {
+      position: absolute;
+      bottom: 50px;
+      right: 100px;
+      font-size: 1.5rem;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+
+
+    <div id="menu"> <!---------menu--------->
+      <div class="menu">
+        <ul>
+          <li><h2 class="logo">All' Light</h2></li>
+          <li><a href="">[ Introduce ]</a></li>
+          <li><a href="">[ Function ]</a></li>
+          <li><a href="">[ Transition ]</a></li>
+          <li><a href="">[ Footer ]</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <div id="loading" class="section"> <!---------loading--------->
+      <h3>loading</h3>
+    </div>
+
+
+    <div id="main" class="section"> <!---------main--------->
+      <h3>main</h3>
+      
+    </div>
+
+
+    <div id="introduce" class="section"> <!---------introduce--------->
+      <div class="box">
+        <h2>ALL 'LIGHT</h2>
+        <p><b>기내 엔터테인먼트</b>는 비행을 경험하는 승객의 전체 비행을 좌우합니다. <br>
+          매해 증가하는 항공편들에 있어서, 기내 엔터테인먼트는 더 발전되어야합니다.
+        </p>
+        <p>
+          기존의 가독성, 일관성, 디자인까지 자칫 불편할 수 있던 기내 화면에서 <br>
+          저희 회사는 더욱 <b>세련</b>되고 <b>고급</b>진 이미지로 사용자의 초개인화에 맞춘 <br>
+          <b>새로운 ‘기내 엔터테인먼트’</b>를 표현하고자 했습니다.
+        </p>
+      </div>
+    </div>
+
+
+    <div id="uxui-1" class="section"> <!---------uxui--------->
+
+      <div class="img-1">
+      </div>
+
+      <div class="text-1">
+        <div class="content">
+          <h4>MAIN</h4>
+          <p>기내 엔터테인먼트의 중심화면이 되는<br>
+            ‘메인 화면'에서는 다양한 연결을 돕는<br>
+            화면이 제공됩니다. </p>
+          <ul>
+            <h5>[제공 서비스]</h5>
+            <li>좌석 / 여권 정보</li>
+            <li>관광지 정보</li>
+            <li>좌석 간의 채팅</li>
+            <li>기내식 선택</li>
+            <li>최신음악</li>
+            <li>최신영화</li>
+            <li>E-BOOK</li>
+            <li>수화물 CCTV</li>
+            <li>듀얼스크린</li>
+          </ul>
+        </div>
+        <div class="nub"><h1>01</h1></div>
+      </div>
+
+    </div>
+
+
+    <div id="uxui-2" class="section">
+
+      <div class="text-2">
+        <div class="content">
+          <h4>FLIGHT</h4>
+          <p>평소 비행에 궁금증이 있으셨나요?<br>
+            이제는 바깥 온도와 일출, 비행의 3D로<br>
+            어디로 가는 여행인지 더욱 실감나게<br>
+            확인이 가능합니다.
+            </p>
+          <ul>
+            <h5>[제공 서비스]</h5>
+            <li>티켓 정보</li>
+            <li>나침반 제공</li>
+            <li>비행기 좌석도</li>
+          </ul>
+        </div>
+        <div class="nub"><h1>02</h1></div>
+      </div>
+
+      <div class="img-2">
+      </div>
+    </div>
+
+
+    <div id="uxui-3" class="section">
+
+      <div class="text-3">
+        <div class="content">
+          <h4>TRAVEL</h4>
+          <p>관광정보를 미리 경험해보세요. <br>
+            기존의 랜드마크 정보가 아닌 여행지를 <br>
+            엄선하여 설정된  아름다운  명소입니다.
+            </p>
+          <ul>
+            <h5>[제공 서비스]</h5>
+            <li>관광지 위치</li>
+            <li>관광지 날씨</li>
+            <li>관광지 역사</li>
+          </ul>
+        </div>
+        <div class="nub"><h1>03</h1></div>
+      </div>
+      <div class="img-3"></div>
+    </div>
+
+
+
+    <div id="uxui-4" class="section">
+
+      <div class="img-4"></div>
+      <div class="text-4">
+        <div class="content">
+          <h4>CHAT</h4>
+          <p>일행과 멀리 떨어져 앉아도 걱정마세요. <br>
+            좌석 간의 채팅서비스를 통해 서로의 <br>
+            안부를 간편하게 물어볼 수 있습니다.
+            </p>
+          <ul>
+            <h5>[제공 서비스]</h5>
+            <li>비행 안내 챗봇</li>
+            <li>좌석 간 채팅 서비스<br>(개인 / 단체 전부 가능)</li>
+          </ul>
+        </div>
+        <div class="nub"><h1>04</h1></div>
+      </div>
+    </div>
+
+
+
+    <div id="uxui-5" class="section">
+
+      <div class="text-5">
+        <div class="content">
+          <h4>MEAL</h4>
+          <p>무엇을 먹을지 천천히 고민하세요. <br>
+            기내식 서비스로 미리 메뉴를 스캔하고, <br>
+            알러지와 영양성분까지 확인 가능합니다. 
+            </p>
+          <ul>
+            <h5>[제공 서비스]</h5>
+            <li>기내식 선택 서비스</li>
+            <li>기내식 주문창</li>
+            <li>키즈 메뉴 선택</li>
+            <li>영양성분표 제공</li>
+            <li>알러지 표 제공</li>
+          </ul>
+        </div>
+        <div class="nub"><h1>05</h1></div>
+      </div>
+      <div class="img-5"></div>
+    </div>
+
+
+
+
+    <div id="uxui-6" class="section">
+
+      <div class="img-6"></div>
+      <div class="text-6">
+        <div class="content">
+          <h4>MUSIC</h4>
+          <p>무엇을 먹을지 천천히 고민하세요. <br>
+            기내식 서비스로 미리 메뉴를 스캔하고, <br>
+            알러지와 영양성분까지 확인 가능합니다. 
+            </p>
+          <ul>
+            <h5>[제공 서비스]</h5>
+            <li>가사 제공</li>
+            <li>좋아요 저장 기능</li>
+            <li>플레이리스트 선정 기능</li>
+            <li>곡/앨범 정보 제공</li>
+          </ul>
+        </div>
+        <div class="nub"><h1>06</h1></div>
+      </div>
+    </div>
+
+
+
+    
+    <div id="uxui-7" class="section">
+
+      <div class="text-7">
+        <div class="content">
+          <h4>ON AIR</h4>
+          <p>수화물칸에 있는 반려동물을 편히 확인하세요. <br>
+            비디오는 실시간으로 제공되며, 비행 공간의 <br>
+            기내 습도, 온도를 확인할 수 있습니다,
+            </p>
+          <ul>
+            <h5>[제공 서비스]</h5>
+            <li>기내식 선택 서비스</li>
+            <li>기내식 주문창</li>
+            <li>키즈 메뉴 선택</li>
+            <li>영양성분표 제공</li>
+            <li>알러지 표 제공</li>
+          </ul>
+        </div>
+        <div class="nub"><h1>07</h1></div>
+      </div>
+      <div class="img-7"></div>
+    </div>
+
+    <div id="uxui-8" class="section">
+
+      <div class="img-8"></div>
+      <div class="text-8">
+        <div class="content">
+          <h4>SIGN</h4>
+          <p>난기류에는 잠시 승무원에게 집중해주세요. <br>
+            청각이 불편한 분들을 위해 자막과 함께 <br>
+            안내를 제공해드리고 있습니다.
+            </p>
+          <ul>
+            <h5>[제공 서비스]</h5>
+            <li>안전 안내 제공</li>
+            <li>자막 제공</li>
+            <li>일시중단 서비스</li>
+          </ul>
+        </div>
+        <div class="nub"><h1>08</h1></div>
+      </div>
+    </div>
+
+
+    <div id="transition" class="section"> <!---------transition--------->
+      <h3>transition</h3>
+    </div>
+
+
+    <div id="footer" class="section"> <!---------footer--------->
+      <div id="member">
+
+
+        <div class="member">
+          <h5>PLANNER</h5>
+  
+          <p>문서현</p>
+          <span><a href="">Portfolio  ></a></span>
+        </div>
+  
+  
+        <div class="member">
+          <h5>DESIGNER</h5>
+  
+            <div class="member-sub">
+              <p>박해진</p>
+              <span><a href="">Portfolio  ></a></span>
+            </div>
+    
+            <div class="member-sub">
+              <p>이수진</p>
+              <span><a href="">Portfolio  ></a></span>
+            </div>
+    
+            <div class="member-sub">
+            <p>권나현</p>
+            <span><a href="">Portfolio  ></a></span>
+            </div>
+        </div>
+  
+  
+        <div class="member">
+          <h5>DEVELOPER</h5>
+  
+            <div class="member-sub">
+              <p>김민찬</p>
+              <span><a href="">Portfolio  ></a></span>
+            </div>
+    
+            <div class="member-sub">
+              <p>임예현</p>
+              <span><a href="">Portfolio  ></a></span>
+            </div>
+        </div>
+
+      </div>
+
+
+      <div id="info-1">
+        <span>개인정보처리방침</span>
+        <span>이용약관</span>
+        <span>고객문의</span>
+        <span>인재채용</span>
+      </div>
+
+
+      <div id="info-2">
+        <img src="" alt="">
+        <div class="info-2-1">Lorem ipsum dolor sit amet consectetur ante porttito</div>
+        <div class="info-2-2"> Est varius nec hac enim fermentum tristique. <br>
+          Libero adipiscing ante porttitor ornare</div>
+      </div>
+  
+  
+  
+      <div id="info-3">
+        <p><b>&copy; All’light.</b> all rights reserved.</p>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- <script src="./js.js"></script> -->
+
+
+
+
+
+
+</body>
+</html>
